@@ -1,0 +1,34 @@
+.block {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    min-height: 100px;
+  }
+
+  /* ВЕРТИКАЛЬНИЙ СЛАЙДЕР */
+  .left-slider {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 9s linear infinite;
+  }
+
+  .slider-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  }
+
+  @keyframes slideUp {
+    0%   { transform: translateY(0); }
+    33%  { transform: translateY(-210px); }
+    66%  { transform: translateY(-420px); }
+    100% { transform: translateY(0); }
+  }
